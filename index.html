@@ -29,6 +29,10 @@
   --sx:.92;
   color-scheme:light;
 }
+/* Cursor: "Color Wave - Normal" by Erick Kobres, converted from .ani (2 frames, 150ms) */
+:root{--cur-a:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFUlEQVR42u2XSRKFIAxEOxb3gqPhzeLJ+m8+FOIIiGzMBiyRPDsDCgDEaCPJP8gwGKoqR4KQZIR4E8T8RxERksSyLIEo3AgQ0hNgZc45qOorIClAVEFV4ZwDgO4g5mqBtRYAuoUmB1ipYK2FiKSZ+jiIKX3g6dDsAWwqIqvX1XWrIuZGg0jJDtf1SNbYnMI8jEfz0FFLGpqpIRMRkIxjQY5s1JjO/QistXGzPed5WHKgeZ7Dmt1QTBVxOVVARCKwqsJ7f5oH5lrtbUUcOU+lv+O8KgdSyXP5S503Hde5hez33hcd400KvPHml32h9s2rq6A22w/3qfl+TSuiVfapJSa9Y36aC7Uxfwxg9A/N+L+pzz57yn68D1wbPJkddwAAAABJRU5ErkJggg==") 0 0, auto; --cur-b:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABE0lEQVR42u2XSw6FIAxFbw37qkvDndWV9U0sQUURhMfEmxiMEjn9IgCgGC1V1Q1kGIyKiI4EUVUNEP8EcdtIRKSqinVdjcheGAT1BNiJmf8GEgPsvDDPMwBARLqCuNwEZgaAbh45AgQviAiYGUQUZ2pzEPewRAJI69CkAE4VcfRCrLcecU+sj8gu5/VI1tCc7N6aU6z4mXXUkobmKqhARKfRlMmRkzemm7WIiMDM4WMpiJyWZTHAZCimmtikLE/lg4jAe3+bBy6/1rkizPIURMniVTlwVw2li7/aro+y7PfeF23jroX1PS2/7At21Vr+qgpaWk41/69WES3c/toDPWN+mwu1MW8GMPpAM/409elTK/0ARyRTJDq88WQAAAAASUVORK5CYII=") 0 0, auto}
+*{cursor:var(--cur-a) !important}
+html.cur-b *{cursor:var(--cur-b) !important}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 img{max-width:100%}
@@ -542,6 +546,13 @@ a{color:inherit}
   }
   window.addEventListener('hashchange', go);
   go();
+})();
+</script>
+<script>
+(function(){
+  try { if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; } catch(e){}
+  var root = document.documentElement;
+  setInterval(function(){ root.classList.toggle('cur-b'); }, 150);
 })();
 </script>
 </body>
